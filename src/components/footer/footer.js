@@ -8,8 +8,8 @@ import { IoCall } from "react-icons/io5";
 export default function Footer() {
   return (
     <div>
-        <div className='footer'>
-            <div className=' row row-col-lg-4        '>
+        <div className='footer '>
+            <div className=' row row-col-lg-4   p-0  m-0       '>
                 <div className='col text-light d-grid my-auto '>
                     <div className='mx-5'>
                         <div className='text-start'><h3> {<FaLocationDot/>} Location</h3></div>
@@ -36,7 +36,7 @@ export default function Footer() {
                         <div> <button className='mx-3 px-4 text-light '>SUBSCRIBE</button></div>
 
                     </div>
-                    <div className='text-start mt-4'>
+                    <div className='text-start '>
                         <h6 className='fw-bolder'>OPPENING</h6>
                         <h6>Week Days 1.00 pm to 12.00 pm</h6>
                         <h6>Week End 10.00 Am to 12.00 pm</h6>
@@ -60,10 +60,8 @@ export default function Footer() {
                 
                 </div>
                 <div className='col  text-end '>
-                    <img src={ require('./pngegg (4).png')} style={{width:"200px"}} />
-
+                    <img src={ require('./pngegg (4).png')} className='image-fluid' style={{width:"200px"}} />
                 </div>
-
 
             </div>
 
