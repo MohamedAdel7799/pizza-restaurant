@@ -3,7 +3,7 @@ import './aboutus.css'
 export default function Aboutus() {
   return (
     <div>
-        <div className='aboutus py-5  h-auto  shadow-lg   '>
+        <div className='aboutus py-5     h-auto  shadow-lg   '>
           <div className='row  h-auto  py-4 row-cols-2       '>
             <div className='col  d-grid'>
               <div className='row g-2 mx-2   row-cols-lg-2 row-cols-sm-1   '>
