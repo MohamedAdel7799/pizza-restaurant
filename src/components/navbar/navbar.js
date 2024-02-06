@@ -1,7 +1,19 @@
 import React from 'react'
 import './navbar.css'
+import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
+
+
+
+    const scroll=(e)=>{
+        window.scrollTo({
+          top:e.current.offsetTop,
+          behavior:"smooth"
+        });
+       };
+    
+
   return (
     <div>
         <nav className="navbar navbar-expand-lg        " style={{}} >
@@ -13,21 +25,32 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse justify-content-end     " id="navbarNav">
                 <ul className="navbar-nav    ">
                     <li className="nav-item">
-                    <a className="nav-link text-light  "  href="#">Home</a>
+                    <Link className="nav-link text-light  "  href="#" onClick={()=>{
+                        scroll(props.home)
+                    }} >Home</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="#">About us </a>
+                    <Link className="nav-link text-light" href="#" onClick={()=>{
+                        scroll(props.aboutus)
+                    }}>About us </Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="#">Menu</a>
+                    <Link className="nav-link text-light" href="#" onClick={()=>{
+                        scroll(props.menu)
+                    }}>Menu</Link>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link text-light" href="#" >Help</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link text-light" href="#" >Service</a>
+                    <Link className="nav-link text-light" href="#" onClick={()=>{
+                        scroll(props.home)
+                    }} >Ourchefs</Link>
                     </li>
                    
+                    <li className="nav-item">
+                    <Link className="nav-link text-light" href="#" onClick={()=>{
+                        scroll(props.help)
+                    }} >Help</Link>
+                    </li>
+                  
                 </ul>              
                 </div>
                 <div className='collapse navbar-collapse justify-content-end   ' id='navbarNav' >

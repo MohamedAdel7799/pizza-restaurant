@@ -50,7 +50,7 @@ export default function Menu() {
                                      />
                                     <h6> <span>{e.price} EP</span> </h6>
                                     <div className='text-center'>
-                                       <button className='btn btn-outline-light '> <Link to={`/${e.id}`} > order now </Link></button>
+                                       <button className='btn btn-outline-light '> <Link to={`/${e.id}`} className=' text-decoration-none  ' > order now </Link></button>
                                     </div>
 
                                       

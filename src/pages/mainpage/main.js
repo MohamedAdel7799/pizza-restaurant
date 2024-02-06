@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Navbar from '../../components/navbar/navbar'
 import Home from '../home/home'
 import Ourchefs from '../our chef/ourchefs'
@@ -8,26 +8,30 @@ import Footer from '../../components/footer/footer'
 
 function MainPage() {
 
-    
+    const home=useRef()
+    const menu =useRef()
+    const ourchefs =useRef()
+    const help =useRef()
+    const aboutus=useRef()
 
   return (
     <div className='mainpage'>
         <div>
-           <Navbar/>
+           <Navbar home={home} menu={menu} ourchefs={ourchefs} help={help} aboutus={aboutus} />
         </div>
-        <div>
+        <div ref={home}>
            <Home/>
         </div>
-        <div>
+        <div ref={ourchefs}>
             <Ourchefs/>            
         </div>
-        <div>
+        <div ref={menu}>
             <Menu/>
         </div>
-        <div>
+        <div ref={aboutus}>
             <Aboutus/>         
         </div>
-        <div>
+        <div ref={help}>
            <Footer/>
         </div>
       
