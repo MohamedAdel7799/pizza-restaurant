@@ -3,10 +3,10 @@ import './aboutus.css'
 export default function Aboutus() {
   return (
     <div>
-        <div className='aboutus py-5     h-auto  shadow-lg   '>
-          <div className='row  h-auto  py-4 row-cols-2       '>
+        <div className='aboutus py-5  h-auto  shadow-lg   '>
+          <div className='row g-0 h-auto  py-4 row-cols-2       '>
             <div className='col  d-grid'>
-              <div className='row g-2 mx-2   row-cols-lg-2 row-cols-sm-1   '>
+              <div className='row    row-cols-lg-2 row-cols-sm-1   '>
                 <div className='col'>
                   <div className='aboutus-image  '>
                      <img src={ require('./download (1).jpg') } className=' img-fluid w-100 ' style={{width:'200px'}}></img>
@@ -20,7 +20,7 @@ export default function Aboutus() {
                 </div>
               </div>
 
-              <div className='row g-2 m-2 row-cols-lg-2 row-cols-sm-1  '>
+              <div className='row  m-2 row-cols-lg-2 row-cols-sm-1  '>
               <div className='col'>
                    <div className='aboutus-image  '>
                         <img src={ require('./download.jpg') } className=' img-fluid w-100 ' style={{width:'200px'}}></img>
@@ -44,15 +44,15 @@ export default function Aboutus() {
                       <button className='btn px-3 btn-danger '> read more </button>
                   </div>
             </div>
-          </div>             
+        </div>             
         </div>
         <div className='service'>
           <div className='h-auto py-5  ' >
-            <div className='row   '>
+            <div className='row g-0 '>
               <h3 className='py-3'> <span> WHAT WE SERVE </span> </h3>
               <h4 className='text-light' > Your Favourit Food Delivery Partner </h4>
             </div>
-            <div className='row row-cols-3 my-5' >
+            <div className='row row-cols-3 g-0  my-5' >
               <div className='col'>
                  <div className='service-image' >
                     <img src={require('./about us/pngegg (7).png')} className=' img-fluid ' style={{width:"130px"}}  ></img>
@@ -72,7 +72,7 @@ export default function Aboutus() {
                   </div>
               </div>
               <div className='col'>
-                 <div className='service-image' >
+                 <div className='service-image g-0 ' >
                     <img src={require('./about us/pngegg (10).png')} className=' img-fluid ' style={{width:"130px"}}  ></img>
                  </div>
                   <div className='service-info my-3'>
@@ -81,7 +81,6 @@ export default function Aboutus() {
                   </div>
               </div>
             </div>
-
           </div>
 
         </div>

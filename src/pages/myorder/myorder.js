@@ -125,7 +125,30 @@ function Myorder() {
                                             <h4>{e.name}</h4>
                                             <h5>{e.price} EP</h5> 
                                             <button className='btn btn-light' onClick={()=>{
-                                                localStorage.setItem('additions',JSON.stringify([e]))
+                                                if(meals==food.pasta){
+                                                    localStorage.setItem('pasta',JSON.stringify([e]))
+                                                }
+                                                if(meals==food.dessert){
+                                                    localStorage.setItem('desert',JSON.stringify([e]))
+
+                                                }
+                                                if(meals==food.drinks){
+                                                    localStorage.setItem('drnks',JSON.stringify([e]))
+
+                                                }
+                                                if(meals==food.salads){
+                                                    localStorage.setItem('salads',JSON.stringify([e]))
+
+                                                }
+                                                if(meals==food.sauces){
+                                                    localStorage.setItem('sauces',JSON.stringify([e]))
+
+                                                }
+                                                if(meals==food.sides){
+                                                    localStorage.setItem('sides',JSON.stringify([e]))
+
+                                                }
+                                               
                                                 console.log(adds)}}>Add</button>
 
                                         </div>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import { Link } from 'react-router-dom';
 
@@ -13,6 +13,11 @@ export default function Navbar(props) {
         });
        };
     
+  const[signin,Setsignin]=useState('')
+  useEffect(()=>{
+    Setsignin(JSON.parse( localStorage.getItem('signin')))
+  })
+
 
   return (
     <div>
@@ -53,13 +58,22 @@ export default function Navbar(props) {
                   
                 </ul>              
                 </div>
-                <div className='collapse navbar-collapse justify-content-end   ' id='navbarNav' >
+                {
+                    signin?(<div className='collapse navbar-collapse justify-content-end   ' id='navbarNav' >
                    
-                    <div className='mx-3 my-sm-1 '><button className='btn signup text-light  px-3'>signup</button></div>
-                    <div className='mx-1 my-sm-2 '><button className='btn  px-2 text-light'>signin</button></div>
+                   <div className='mx-3 my-sm-1 '><button className='btn signup text-light  px-3'
+                   onClick={()=>{
+                    localStorage.removeItem('signin')
+                   }}>logout</button></div>
+              
+               </div>):(<div className='collapse navbar-collapse justify-content-end   ' id='navbarNav' >
                    
-
-                </div>
+                   <div className='mx-3 my-sm-1 '><button className='btn signup text-light  px-3'><Link to='/signin' className=' text-decoration-none text-light  ' >Signin</Link></button></div>
+                   <div className='mx-1 my-sm-2 '><button className='btn  px-2 text-light'><Link to='/signup' className=' text-decoration-none text-light  ' >Signup</Link></button></div>
+              
+               </div>)
+                }
+                
            
             </div>
         </nav>

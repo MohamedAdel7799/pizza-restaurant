@@ -15,7 +15,7 @@ function MainPage() {
     const aboutus=useRef()
 
   return (
-    <div className='mainpage'>
+    <div className='mainpage '>
         <div>
            <Navbar home={home} menu={menu} ourchefs={ourchefs} help={help} aboutus={aboutus} />
         </div>

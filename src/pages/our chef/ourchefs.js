@@ -47,7 +47,6 @@ export default function Ourchefs() {
                 <div className='chef-info py-2 text-light '>
                   <h3> Nigella Lawson </h3>
                   <h5> Pastry chefs </h5>
-
                 </div>
               </div>
               </div>

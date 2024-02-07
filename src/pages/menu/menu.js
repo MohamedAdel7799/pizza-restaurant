@@ -14,15 +14,6 @@ export default function Menu() {
      })
 
      
- 
-
-
-
-
-
-    
-    
-
 
   return (
     <div>
@@ -50,23 +41,16 @@ export default function Menu() {
                                      />
                                     <h6> <span>{e.price} EP</span> </h6>
                                     <div className='text-center'>
-                                       <button className='btn btn-outline-light '> <Link to={`/${e.id}`} className=' text-decoration-none  ' > order now </Link></button>
-                                    </div>
-
-                                      
+                                       <button className='btn btn-outline-light '
+                                       onClick={()=>{
+                                        localStorage.setItem('mypizza',JSON.stringify([e]))
+                                       }}> <Link to={`/${e.id}`} className=' text-decoration-none text-danger ' > order now </Link></button>
+                                    </div>                             
                                 </div>
-                    
-
                             </div>
                         </div>
                     </div>
-
-                )
-               
-            })
-
-
-            }
+                )})}
 
 
 

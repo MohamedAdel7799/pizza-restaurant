@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div>
         <div className='vh-100 main shadow-lg  '>
-            <div className='row row-cols-2 h-100  '>
-                <div className='col d-grid    '>
+            <div className='row row-cols-lg-2 g-0   row-cols-sm-1   '>
+                <div className='col d-grid '>
                     <div  className='my-5 mx-auto text-light '>
                       <div className= ' my-5  text-start '>
                         <h1> Your <span>Favourit</span></h1>
@@ -21,9 +21,9 @@ export default function Home() {
                       </div>
                     </div>
                 </div>
-                <div className='col d-grid  '>
+                <div className='col d-grid '>
                     <div className='   '>
-                    <img src={ require('./pngegg (5).png') } className=' img-fluid my-5 ' style={{width:"400px"}}/>
+                    <img src={ require('./pngegg (5).png') } className=' img-fluid my-5 mx-5 ' style={{width:"400px"}}/>
                     </div>
 
                 </div>
