@@ -17,7 +17,7 @@ export default function Home() {
                       </div>
                       <div className=' d-flex justify-align-align-content-around    '>
                          <div className='order'> <button className='btn px-4 text-light '> Order now {<AiFillForward/>}</button> </div>
-                         <div className='serve mx-5'> <button className='btn  mx-4 text-light   '> how we can serve you?</button></div>
+                         <div className='serve mx-5'> <button className='btn   text-light w-100  '> how we can serve you?</button></div>
                       </div>
                     </div>
                 </div>

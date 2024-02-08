@@ -48,12 +48,12 @@ export default function Aboutus() {
         </div>
         <div className='service'>
           <div className='h-auto py-5  ' >
-            <div className='row g-0 '>
+            <div className='row g-0 text-center mx-auto  '>
               <h3 className='py-3'> <span> WHAT WE SERVE </span> </h3>
               <h4 className='text-light' > Your Favourit Food Delivery Partner </h4>
             </div>
             <div className='row row-cols-3 g-0  my-5' >
-              <div className='col'>
+              <div className='col text-center '>
                  <div className='service-image' >
                     <img src={require('./about us/pngegg (7).png')} className=' img-fluid ' style={{width:"130px"}}  ></img>
                  </div>
@@ -62,7 +62,7 @@ export default function Aboutus() {
                      <h6 className='text-light'> You only need a few steps in ordering food</h6>
                   </div>
               </div>
-              <div className='col'>
+              <div className='col text-center '>
                  <div className='service-image' >
                     <img src={require('./about us/pngegg (1).png')} className=' img-fluid ' style={{width:"210px"}}  ></img>
                  </div>
@@ -71,7 +71,7 @@ export default function Aboutus() {
                      <h6 className='text-light'> Delivery that is always ontime even faster</h6>
                   </div>
               </div>
-              <div className='col'>
+              <div className='col text-center '>
                  <div className='service-image g-0 ' >
                     <img src={require('./about us/pngegg (10).png')} className=' img-fluid ' style={{width:"130px"}}  ></img>
                  </div>

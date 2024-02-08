@@ -3,34 +3,26 @@ import './myorder.css'
 import { Link, useParams } from 'react-router-dom'
 import {food} from './db'
 
-
-
-
-   
-
-
-
-
 function Myorder() {
-
 
     const {id}=useParams()
     const [meals ,Setmeals]=useState([])
     const [count,Setcount]=useState(1)
     const [mypizza,Setpizza]=useState([])
-
+    const [myorder,Setmyorder]=useState([])
+ 
+    
 
     useEffect(()=>{
         Setpizza(food.pizza)
     })
 
-    
+
+
+    const orderlist =localStorage.getItem('myorder')
+
    
-
-
-  const  alladds = new Array
-  const adds =alladds.push(JSON.parse(localStorage.getItem('additions')))  
-
+    
 
 
   return (
@@ -119,38 +111,18 @@ function Myorder() {
                                     <div className='col  rounded-3  '>
                                         <div className='img py-2 '>
                                                 <img src={e.image} className=' img-fluid rounded-circle  ' style={{width:"200px"}}></img>
-
                                         </div>
-                                        <div className='py-2  '>
+                                        <div className='py-2'>
+
                                             <h4>{e.name}</h4>
-                                            <h5>{e.price} EP</h5> 
+                                            <h5>{e.price} EP</h5>
+
+                                            
                                             <button className='btn btn-light' onClick={()=>{
-                                                if(meals==food.pasta){
-                                                    localStorage.setItem('pasta',JSON.stringify([e]))
-                                                }
-                                                if(meals==food.dessert){
-                                                    localStorage.setItem('desert',JSON.stringify([e]))
-
-                                                }
-                                                if(meals==food.drinks){
-                                                    localStorage.setItem('drnks',JSON.stringify([e]))
-
-                                                }
-                                                if(meals==food.salads){
-                                                    localStorage.setItem('salads',JSON.stringify([e]))
-
-                                                }
-                                                if(meals==food.sauces){
-                                                    localStorage.setItem('sauces',JSON.stringify([e]))
-
-                                                }
-                                                if(meals==food.sides){
-                                                    localStorage.setItem('sides',JSON.stringify([e]))
-
-                                                }
-                                               
-                                                console.log(adds)}}>Add</button>
-
+                                                                Setmyorder([...myorder , e ])
+                                                                localStorage.setItem('myorder',JSON.stringify(myorder))}}>Add</button>
+                                          
+                                                                                                                                                                              
                                         </div>
                                     </div>            
                         )
@@ -160,8 +132,31 @@ function Myorder() {
                 </div>
                                           
             </div>
-            <div className='row  shadow-lg  rounded-5  my-5   mx-auto py-5 text-center '>
-                 
+            <div className='row  shadow-lg row-cols-lg-4 rounded-5  my-5   mx-auto  text-center '>
+                              
+                        { myorder.map((e)=>{
+
+                            return(
+                                <div className='col '>
+                                  <div>
+                                     <img className=' img-fluid ' src={e.image} style={{width:"200px"}} ></img>
+                                  </div>   
+                                <h4>{e.name}</h4>
+                                <button   onClick={()=>{
+                                   myorder.map((element)=>{
+                                    if(element.name==e.name){
+                                        myorder.splice(element,1)
+                                        Setmyorder([...myorder])
+                                        
+                                    }
+                            
+                                })
+                                }} > remove</button>
+                                 
+                                <h5>{ e.price * count } EG</h5>
+                            </div>
+                            )
+                     })}           
             </div>
             </div>
     </div>

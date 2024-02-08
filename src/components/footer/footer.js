@@ -10,7 +10,7 @@ export default function Footer() {
     <div>
         <div className='footer container py-3  '>
             <div className='row footer-info row-cols-lg-3 row-cols-sm-2 g-1 py-5  '>
-               <div className='col'>
+               <div className='col text-center '>
                       <div >
                            <h4>ADRESS</h4>
                            <h6>570 8th Nasr City ,Cairo</h6>
@@ -18,7 +18,7 @@ export default function Footer() {
 
                       </div>
                </div>
-               <div className='col'>
+               <div className='col text-center '>
                <div >
                            <h4>BOOK A TABLE</h4>
                            <h6>Dogfood och Sliders foodtruck</h6>
@@ -27,7 +27,7 @@ export default function Footer() {
 
                       </div>
                </div>
-               <div className='col'>
+               <div className='col text-center '>
                <div >
                            <h4>ADRESS</h4>
                            <h6>Monday - Friday</h6>
