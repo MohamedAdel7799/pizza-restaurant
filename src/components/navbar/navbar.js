@@ -21,7 +21,13 @@ export default function Navbar(props) {
 
   return (
     <div>
-        <nav className="navbar navbar-expand-lg fixed-top " style={{}} >
+        <motion.nav initial={{opacity:0,
+        scale:0}}
+        animate={{opacity:1,
+        scale:1}}
+        transition={{duration:1}}
+        viewport={{once:true}}
+        className="navbar navbar-expand-lg fixed-top " style={{}} >
             <div className="container-fluid d-flex ">
                 <img className='mx-3 ' src={require('./pngegg (11).png')} style={{width:"60px "}}></img>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,7 +83,7 @@ export default function Navbar(props) {
            
             </div>
             <motion.div className='line' style={{height:5, position:"fixed", scaleX:scrollYProgress , transformOrigin:'0%' , top:0 , left:0, right:0}}></motion.div>
-        </nav>
+        </motion.nav>
     </div>
   )
 }

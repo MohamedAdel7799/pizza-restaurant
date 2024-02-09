@@ -25,7 +25,23 @@ export default function Ourchefs() {
      
           <div class="container ">
           <div class="row justify-content-center ">
-            <div class="col">
+            <motion.div  initial={{scale:0 , opacity:0}}
+                      
+
+                      whileInView={{
+                        scale:1,
+                        opacity:1,
+                        
+
+                      }}
+                      
+                    
+                      transition={{
+                        delay:0,
+                        duration:0.6,
+                        ease:"easeInOut"
+                        
+                      }} class="col">
             <div class=" p-1 chefs shadow-lg ">
                 <div className='chef'>
                   <div className='chef-image shadow-lg text-center '  >
@@ -37,8 +53,23 @@ export default function Ourchefs() {
                   </div>
                 </div>
             </div>
-            </div>
-            <div class="col ">
+            </motion.div>
+
+
+            <motion.div  initial={{scale:0 , opacity:0}}
+                        
+                      
+                        transition={{
+                          delay:0,
+                          duration:0.8,
+                          ease:"easeInOut"
+                          
+                        }} 
+                        whileInView={{
+                          opacity:1,
+                          scale:1
+                        }}
+                        class="col ">
               <div class=" p-1 chefs shadow-lg">
               <div className='chef  '>
                 <div className='chef-image shadow-lg text-center  ' >
@@ -51,8 +82,26 @@ export default function Ourchefs() {
                 </div>
               </div>
               </div>
-            </div>
-            <div class="col ">
+            </motion.div>
+
+
+            <motion.div  initial={{scale:0 , opacity:0}}
+                      
+
+                        whileInView={{
+                          scale:1,
+                          opacity:1,
+
+
+                        }}
+                      
+                        transition={{
+                          delay:0,
+                          duration:1,
+                          ease:"easeInOut"
+                          
+                        }}
+                         class="col ">
               <div class=" p-1 chefs shadow-lg ">
               <div className='chef  '>
                 <div className='chef-image shadow-lg  h-75  text-center  '   >
@@ -64,7 +113,7 @@ export default function Ourchefs() {
                 </div>
               </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 </div>
 

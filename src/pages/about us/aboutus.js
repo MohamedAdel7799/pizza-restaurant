@@ -1,5 +1,7 @@
 import React from 'react'
 import './aboutus.css'
+
+import {motion} from "framer-motion"
 export default function Aboutus() {
   return (
     <div>

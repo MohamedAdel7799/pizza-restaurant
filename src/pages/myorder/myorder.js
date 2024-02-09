@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './myorder.css'
 import { Link, useParams } from 'react-router-dom'
 import {food} from './db'
+import{motion} from 'framer-motion'
 
 function Myorder() {
 
@@ -33,7 +34,11 @@ function Myorder() {
                 if(e.id == id){
                     return(
                      
-                        <div className='row my-5 shadow-lg rounded-5 bg-light '>
+                        <motion.div    initial={{opacity:0,scale:0}}
+                        whileInView={{opacity:1,scale:1}}
+                        transition={{ duration:0.5}}
+                        
+                           className='row my-5 shadow-lg rounded-5 bg-light '>
                             <div className='row row-cols-lg-2 row-cols-sm-1'>
                                 <div className='col text-center  '>
                                            <img src={e.image} className='img-fluid rounded-5 '  ></img>
@@ -60,7 +65,7 @@ function Myorder() {
                                     </div>                                                                         
                                 </div>
                             </div>                   
-                        </div>
+                        </motion.div>
                     
                     )} })}
 
@@ -108,7 +113,11 @@ function Myorder() {
                         return(
                            
                                 
-                                    <div className='col text-center  py-3  '>
+                                    <motion.div    initial={{opacity:0,scale:0}}
+                                    animate={{opacity:1, scale:1}}
+                                    transition={{ duration:0.6}}
+                                    exit={{opacity:0 , scale:0}}
+     className='col text-center  py-3 rounded-4   '>
                                         <div className='img   h-75 '  >
                                                 <img src={e.image} className='img-fluid   ' style={{width:"200px"}} ></img>
                                         </div>
@@ -124,7 +133,7 @@ function Myorder() {
                                                              
                                                                 }}>Add</button>                                                                                                                                                                       
                                         </div>
-                                    </div>            
+                                    </motion.div>            
                         )
                      }))
                     }
@@ -145,7 +154,15 @@ function Myorder() {
                         { myorder.map((e)=>{
 
                             return(
-                                <div className='col py-5  '>
+                                <motion.div 
+                                 
+                                initial={{opacity:0,scale:0}}
+                                animate={{opacity:1, scale:1}}
+                                transition={{ duration:0.5}}
+                                exit={{opacity:0 , scale:0}}
+
+                                
+                                className='col py-5 rounded-4 '>
                                   <div className='img h-75'>
                                      <img className='
                                       img-fluid ' src={e.image} style={{width:"200px"}} ></img>
@@ -164,7 +181,7 @@ function Myorder() {
                                     </div>  
                                 
                            
-                            </div>
+                            </motion.div>
 
                              
                             )
