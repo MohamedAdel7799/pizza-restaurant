@@ -29,12 +29,18 @@ export default function Menu() {
                      initial="hidden"
                      animate="show"
                     className='col meal   '>
-                        <motion.div variants={{hidden:{opacity:0}, show:{opacity:1} }}
-                        whileHover={{
+                        <motion.div 
+                        initial={{opacity:0, scale:0}}
+                        whileInView={{
                             scale:1,
-                            backdropFilter:14,
+                            opacity:1,
                             
-                        }} className='card ' key={e.id}>
+                        }} 
+                         transition={{
+                            duration:0.4,
+                            delay:0.1
+                         }}
+                        className='card ' key={e.id}>
                             <div className='card-image h-75 w-100 '>
                                  <img src={e.image} className=' img-fluid '  ></img>
                             </div>

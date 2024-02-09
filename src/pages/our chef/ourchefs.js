@@ -1,17 +1,31 @@
 import React from 'react'
 import './ourchefs.css'
+import {motion} from 'framer-motion'
 export default function Ourchefs() {
   return (
     <div className='h-auto py-5  ourchefs  bg-light   '>
         <div className='container'>
-            <div className='title py-3 text-center  '>
+            <motion.div
+             initial={{opacity:0,
+            scale:0
+          }}
+          whileInView={{
+            scale:1,
+            opacity:1
+          }}
+          transition={{
+            
+            duration:0.3
+          }}
+          viewport={{once:true}}
+            className='title py-3 text-center  '>
                  <h1 >Our Chefs </h1>
                  <h5>We have the best pizza makers in the world</h5>
-            </div>
+            </motion.div>
      
           <div class="container ">
           <div class="row justify-content-center ">
-            <div class="col  ">
+            <div class="col">
             <div class=" p-1 chefs shadow-lg ">
                 <div className='chef'>
                   <div className='chef-image shadow-lg text-center '  >
