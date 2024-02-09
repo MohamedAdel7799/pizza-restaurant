@@ -5,9 +5,9 @@ import { AiFillForward } from "react-icons/ai";
 export default function Home() {
   return (
     <div>
-        <div className='vh-100 main shadow-lg  '>
-            <div className='row row-cols-lg-2 g-0   row-cols-sm-1   '>
-                <div className='col d-grid '>
+        <div className='vh-100 main  py-5     shadow-lg d-grid '>
+            <div className='row row-cols-lg-2   h-100 py-5  g-0 my-auto  row-cols-sm-2   '>
+                <div className='col d-grid  '>
                     <div  className='my-5 mx-auto text-light '>
                       <div className= ' my-5  text-start '>
                         <h1> Your <span>Favourit</span></h1>

@@ -21,7 +21,7 @@ export default function Navbar(props) {
 
   return (
     <div>
-        <nav className="navbar navbar-expand-lg        " style={{}} >
+        <nav className="navbar navbar-expand-lg fixed-top  " style={{}} >
             <div className="container-fluid d-flex ">
                 <img className='mx-3 ' src={require('./pngegg (11).png')} style={{width:"60px "}}></img>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

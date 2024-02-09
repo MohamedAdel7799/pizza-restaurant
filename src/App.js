@@ -11,7 +11,7 @@ import Signup from './pages/register pages/signup/signup';
 
 function App() {
   return (
-    <div className="App m-0 ">
+    <div className="App m-0  ">
       <Routes>
         <Route path='/' element={<MainPage/>}></Route>
         <Route path='/:id' element={<Myorder/>} > </Route>

@@ -3,7 +3,7 @@ import {food} from './db'
 import'./menu.css'
 import ReactStars from 'react-rating-stars-component';
 import { Link } from 'react-router-dom';
-
+import {motion}from 'framer-motion'
 export default function Menu() {
  
      const[data,Setdata]=useState([])
@@ -24,8 +24,17 @@ export default function Menu() {
       
             {data.slice(0,8).map((e)=>{
                 return(
-                    <div className='col meal   '>
-                        <div className='card ' key={e.id}>
+                    <motion.div variants={{hidden:{opacity:0},
+                    show:{opacity:1, transition:{staggerChildren:0.25,} }}}
+                     initial="hidden"
+                     animate="show"
+                    className='col meal   '>
+                        <motion.div variants={{hidden:{opacity:0}, show:{opacity:1} }}
+                        whileHover={{
+                            scale:1,
+                            backdropFilter:14,
+                            
+                        }} className='card ' key={e.id}>
                             <div className='card-image h-75 w-100 '>
                                  <img src={e.image} className=' img-fluid '  ></img>
                             </div>
@@ -41,16 +50,17 @@ export default function Menu() {
                                      />
                                     <h6> <span>{e.price} EP</span> </h6>
                                     <div className='text-center'>
-                                       <button className='btn  '
+                                       <button className='btn px-3 py-1  text-light  rounded-3   '
                                        onClick={()=>{
                                         localStorage.setItem('mypizza',JSON.stringify([e]))
                                        }}> <Link to={`/${e.id}`} className=' text-decoration-none text-danger ' > order now </Link></button>
                                     </div>                             
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 )})}
+
 
 
 
