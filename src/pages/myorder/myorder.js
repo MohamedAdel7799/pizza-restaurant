@@ -126,11 +126,10 @@ function Myorder() {
                                             <h4 className=''>{e.name}</h4>
                                             <h5>{e.price} EP</h5>
                                      
-                                            <button className='orderbutton px-3 rounded-3    ' onClick={()=>{
+                                            <button className='orderbutton px-3 rounded-3 ' onClick={()=>{
                                                                 Setmyorder([...myorder , e ])
                                                                 localStorage.setItem('myorder',JSON.stringify(myorder))
-                                                                Settotalprice([...totalprice ,  ])
-                                                             
+                                                                Settotalprice([...totalprice ,  ]) 
                                                                 }}>Add</button>                                                                                                                                                                       
                                         </div>
                                     </motion.div>            
