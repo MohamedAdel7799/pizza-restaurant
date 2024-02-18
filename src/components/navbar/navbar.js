@@ -27,6 +27,7 @@ export default function Navbar(props) {
         scale:1}}
         transition={{duration:1}}
         viewport={{once:true}}
+    
         className="navbar navbar-expand-lg fixed-top " style={{}} >
             <div className="container-fluid d-flex ">
                 <img className='mx-3 ' src={require('./pngegg (11).png')} style={{width:"60px "}}></img>

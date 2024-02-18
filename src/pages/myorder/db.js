@@ -338,7 +338,47 @@ export const food={
             "vegetarian": true,
             "price": 28.0,
             "image": "https://i.imgur.com/3jKSuUu.png"
-        }
+        },
+        {
+            "id": 2,
+            "name": "Bolognese",
+            "description": "",
+            "ingredients": ["penne", "ragu sauce", "beef cubes", "mozzarella"],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 28.0,
+            "image": "https://i.imgur.com/IXDJ52k.png"
+        },
+        {
+            "id": 3,
+            "name": "Bolognese",
+            "description": "",
+            "ingredients": ["penne", "ragu sauce", "beef cubes", "mozzarella"],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 28.0,
+            "image": "https://i.imgur.com/IXDJ52k.png"
+        },
+        {
+            "id": 4,
+            "name": "Bolognese",
+            "description": "",
+            "ingredients": ["penne", "ragu sauce", "beef cubes", "mozzarella"],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 28.0,
+            "image": "https://i.imgur.com/IXDJ52k.png"
+        },
+        {
+            "id": 5,
+            "name": "Bolognese",
+            "description": "",
+            "ingredients": ["penne", "ragu sauce", "beef cubes", "mozzarella"],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 28.0,
+            "image": "https://i.imgur.com/IXDJ52k.png"
+        },
     ],
     "salads" : [
         {
@@ -399,7 +439,65 @@ export const food={
             "vegetarian": false,
             "price": 20,
             "image": "https://i.imgur.com/Ph0IjrX.png"
+        },
+        {
+            "id": 3,
+            "name": "Tuna",
+            "description": "",
+            "ingredients": [
+                "tuna",
+                "green olives",
+                "corn",
+                "red pepper",
+                "red onion",
+                "lettuce",
+                "beetroot",
+                "sauce of your choice"
+            ],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 20,
+            "image": "https://i.imgur.com/Ph0IjrX.png"
+        },
+        {
+            "id": 4,
+            "name": "Tuna",
+            "description": "",
+            "ingredients": [
+                "tuna",
+                "green olives",
+                "corn",
+                "red pepper",
+                "red onion",
+                "lettuce",
+                "beetroot",
+                "sauce of your choice"
+            ],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 20,
+            "image": "https://i.imgur.com/Ph0IjrX.png"
+        },
+        {
+            "id": 5,
+            "name": "Tuna",
+            "description": "",
+            "ingredients": [
+                "tuna",
+                "green olives",
+                "corn",
+                "red pepper",
+                "red onion",
+                "lettuce",
+                "beetroot",
+                "sauce of your choice"
+            ],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 20,
+            "image": "https://i.imgur.com/Ph0IjrX.png"
         }
+
     ],
     "dessert": [
         {
@@ -434,6 +532,26 @@ export const food={
         },
         {
             "id": 3,
+            "name": "Cheesecake",
+            "description": "Cheesecake with berries topping",
+            "ingredients": [],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 15,
+            "image": "https://i.imgur.com/AsldA7x.png"
+        },
+        {
+            "id": 4,
+            "name": "Cheesecake",
+            "description": "Cheesecake with berries topping",
+            "ingredients": [],
+            "spicy": false,
+            "vegetarian": false,
+            "price": 15,
+            "image": "https://i.imgur.com/AsldA7x.png"
+        },
+        {
+            "id": 5,
             "name": "Cheesecake",
             "description": "Cheesecake with berries topping",
             "ingredients": [],
@@ -566,26 +684,7 @@ export const food={
             "price": 4,
             "image": "https://i.imgur.com/OmejA2J.png"
         },
-        {
-            "id": 6,
-            "name": "Ketchup",
-            "description": "",
-            "ingredients": [],
-            "spicy": false,
-            "vegetarian": false,
-            "price": 4,
-            "image": "https://i.imgur.com/k5Dg7hZ.png"
-        },
-        {
-            "id": 7,
-            "name": "Garlic sauce",
-            "description": "",
-            "ingredients": [],
-            "spicy": false,
-            "vegetarian": false,
-            "price": 4,
-            "image": "https://i.imgur.com/OmejA2J.png"
-        }
+      
     ],
     "sides":[
         {
@@ -610,13 +709,44 @@ export const food={
         },
         {
             "id": 2,
-            "name": "Coleslaw",
-            "description": "Cabbage salad, carrots and dressing",
+            "name": "Wedges",
+            "description": "Baked potatoes, slightly spicy",
             "ingredients": [],
             "spicy": false,
-            "vegetarian": false,
-            "price": 10,
-            "image": "https://i.imgur.com/HNX30U9.png"
-        }
+            "vegetarian": true,
+            "price": 6,
+            "image": "https://i.imgur.com/sxP6sJt.png"
+        },
+        {
+            "id": 3,
+            "name": "Wedges",
+            "description": "Baked potatoes, slightly spicy",
+            "ingredients": [],
+            "spicy": false,
+            "vegetarian": true,
+            "price": 6,
+            "image": "https://i.imgur.com/sxP6sJt.png"
+        },
+        {
+            "id": 4,
+            "name": "Wedges",
+            "description": "Baked potatoes, slightly spicy",
+            "ingredients": [],
+            "spicy": false,
+            "vegetarian": true,
+            "price": 6,
+            "image": "https://i.imgur.com/sxP6sJt.png"
+        },
+        {
+            "id": 5,
+            "name": "Wedges",
+            "description": "Baked potatoes, slightly spicy",
+            "ingredients": [],
+            "spicy": false,
+            "vegetarian": true,
+            "price": 6,
+            "image": "https://i.imgur.com/sxP6sJt.png"
+        },
+       
     ]
 }
