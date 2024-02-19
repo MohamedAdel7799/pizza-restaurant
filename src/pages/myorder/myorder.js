@@ -103,7 +103,7 @@ function Myorder() {
 
                   {meals.filter(item =>{
                  
-                      if (searchitem == '' && searchitem !=item.name) {
+                      if (searchitem == '' ) {
                         return item
                         
                       }

@@ -27,7 +27,7 @@ export default function Menu() {
             <div>            <h1 className=' p-0 m-0 '> Best Special Menue </h1>
             </div>
             <div class="input-group " style={{width:"300px"}}>
-                  <input type="text" class="form-control" placeholder="search "   onChange={(event)=>{
+                  <input type="text" class="form-control" placeholder="search for pizza "   onChange={(event)=>{
                   setsearchitem(event.target.value) }}></input>
                  <div class="input-group-prepend">
                  <span class="input-group-text py-3 rounded-0  " id="basic-addon1"><FcSearch/></span>
@@ -35,15 +35,7 @@ export default function Menu() {
             </div>
         </div>       
         <div className='container row g-3 my-3 row-cols-lg-4 row-cols-sm-2  mx-auto'>
-      
-            {data.filter(item =>{
-                if (searchitem == '') {
-                    return item
-                    
-                }else if (item.name.toLowercase().includes(searchitem.toLocaleLowerCase())) {
-                    return item
-                }
-            }).slice(0,8).map((e)=>{
+            {!searchitem? data.slice(0,8).map((e)=>{
                     return(
                         <motion.div variants={{hidden:{opacity:0},
                         show:{opacity:1, transition:{staggerChildren:0.25,} }}}
@@ -85,12 +77,57 @@ export default function Menu() {
                                     </div>
                                 </div>
                             </motion.div>
-                        </motion.div>
-            )})}
-
-
-
-
+                                        </motion.div>)}): data.filter((item)=>{
+                                            if (searchitem == '') {
+                                                return item
+                                                
+                                            } else if (item.name.toLowerCase().includes(searchitem)) {
+                                                return item
+                                            }
+                                        }).slice(0,8).map((e)=>{
+                                            return(
+                                                <motion.div variants={{hidden:{opacity:0},
+                                                show:{opacity:1, transition:{staggerChildren:0.25,} }}}
+                                                 initial="hidden"
+                                                 animate="show"
+                                                className='col meal   '>
+                                                    <motion.div 
+                                                    initial={{opacity:0, scale:0}}
+                                                    whileInView={{
+                                                        scale:1,
+                                                        opacity:1,
+                                                        
+                                                    }} 
+                                                     transition={{
+                                                        duration:0.4,
+                                                        delay:0.1
+                                                     }}
+                                                    className='card ' key={e.id}>
+                                                        <div className='card-image h-75 w-100 '>
+                                                             <img src={e.image} className=' img-fluid '  ></img>
+                                                        </div>
+                                                        <div className='card-info py-3   '>
+                                                            <div className='text-start text-light mx-3'>
+                                                                <h5>{e.name}</h5>
+                                                                 <ReactStars
+                                                                 count={5}
+                                                                 size={26}
+                                                                 Color="#ffd700"
+                                                                 edit={false}
+                                                                 value={5}
+                                                                 />
+                                                                <h6> <span>{e.price} EP</span> </h6>
+                                                                <div className='text-center'>
+                                                                   <button className='btn px-3 py-1  text-light  rounded-3   '
+                                                                   onClick={()=>{
+                                                                    localStorage.setItem('mypizza',JSON.stringify([e]))
+                                                                   }}> <Link to={`/${e.id}`} className=' text-decoration-none text-danger ' > order now </Link></button>
+                                                                </div>                             
+                                                            </div>
+                                                        </div>
+                                                    </motion.div>
+                                                                </motion.div>)})
+            }
         </div>
     </div>
   )
