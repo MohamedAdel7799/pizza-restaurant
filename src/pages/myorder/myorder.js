@@ -23,6 +23,7 @@ function Myorder() {
     const dispatch = useDispatch()
     const ordernum =Math.floor(Math.random() * 10000);
     const [additionsprice , setadditionsprice]=useState([])
+    const[searchitem,setsearchitem]=useState('')
    
 
     let sum = 0
@@ -69,7 +70,9 @@ function Myorder() {
                   </div>
                   <div>
                       <div class="input-group ">
-                        <input type="text" class="form-control" placeholder="search " aria-label="Username" aria-describedby="basic-addon1"></input>
+                        <input type="text" class="form-control" placeholder="search "   onChange={(event)=>{
+                             setsearchitem(event.target.value)
+                        }}></input>
                         <div class="input-group-prepend">
                           <span class="input-group-text py-3 rounded-0  " id="basic-addon1"><FcSearch/></span>
                         </div>
@@ -97,41 +100,67 @@ function Myorder() {
               </div>      
               <div className='container  my-4  '>
                 <div className='row row-cols-lg-3 g-3 text-center  ' >
-                  {meals.map((meal)=>{return(
 
-                             <div className=' '> 
-                                  <div className="col  mb-4  ">
-                                        <div className="card h-100 w-75 mx-auto  border-0  ">
-                                          <div className="h-75" >
-                                            <img src={meal.image}  className="w-50  img-fluid  "/>                                           
-                                              
-                                              <div className="hover-overlay">
-                                                <div className="mask" style={{backgroundColor: "rgba(251, 251, 251, 0.15)"}}></div>
-                                              </div>                                         
-                                          </div>
-                                          <div className="card-body d-flex justify-content-between align-items-center bg-dark ">
-                                            <div className=' text-start '>
-                                                <h5 className="card-title mb-3 fw-bolder text-light">{meal.name}</h5>                                  
-                                                <h6 className="mb-3 text-danger fw-bold">{meal.price} EP</h6>
+                  {meals.filter(item =>{
+                 
+                      if (searchitem == '' && searchitem !=item.name) {
+                        return item
+                        
+                      }
+                      else if(item.name.toLowerCase().includes(searchitem.toLocaleLowerCase())){
+                        return item
 
-                                            </div>
-                                            <div className=''>
-                                            <button className='addbutton  fw-bolder text-light' onClick={()=>{
-                                                              dispatch(addtooredr(meal))            
-                                                              setadditionsprice([...additionsprice , meal.price])
-                                                            }} > <IoIosAddCircleOutline/> </button>
-                                                            
-                                            </div>                                            
-                                          </div>
-                                        </div>
-                                       
-                                  </div>
+                      }
+                    
+                  }).map((meal)=>{
+                    return(
+                      <div className="col  mb-4  ">
+                      <div className="card h-100 w-75 mx-auto  border-0  ">
+                        <div className="h-75" >
+                          <img src={meal.image}  className="w-50  img-fluid  "/>                                           
+                            
+                            <div className="hover-overlay">
+                              <div className="mask" style={{backgroundColor: "rgba(251, 251, 251, 0.15)"}}></div>
+                            </div>                                         
+                        </div>
+                        <div className="card-body d-flex justify-content-between align-items-center bg-dark ">
+                          <div className=' text-start '>
+                              <h5 className="card-title mb-3 fw-bolder text-light">{meal.name}</h5>                                  
+                              <h6 className="mb-3 text-danger fw-bold">{meal.price} EP</h6>
 
-                             </div>
+                          </div>
+                          <div className=''>
+                          <button className='addbutton  fw-bolder text-light' onClick={()=>{
+                                            dispatch(addtooredr(meal))            
+                                            setadditionsprice([...additionsprice , meal.price])
+                                          }} > <IoIosAddCircleOutline/> </button>                                                         
+                          </div>                                            
+                        </div>
+                      </div>                                  
+                </div>
+                    )
+
+                  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 /* {meals.map((meal)=>{return(  
+                                  
+
                             
                  
 
-                  )})}                
+                                                          )})}                */}
                 </div>
                 
               </div>

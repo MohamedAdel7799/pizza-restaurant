@@ -1,19 +1,4 @@
-.title{
-    color: rgb(36, 35, 35);    
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-
-.chef-image{
-
-    background-color:rgb(36, 35, 35) ;
-}
-
-.chefs{
-    background-color: #ff4400;
-}
-
-.chef-info{
-
-    font-family: Arial, Helvetica, sans-serif;
-}
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
