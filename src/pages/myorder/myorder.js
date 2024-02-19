@@ -76,7 +76,7 @@ function Myorder() {
                       </div>
                   </div>
               </div>
-              <div className='text-danger fw-bold  d-flex justify-content-between my-5'>
+              <div className='text-danger addbar py-3 fw-bold  d-flex justify-content-between my-4'>
                 <div>
                     <Link className='mx-4 text-decoration-none text-light  ' onClick={()=>{Setmeals(food.pasta)}}>pasta</Link>
                     <Link className='mx-4 text-decoration-none text-light' onClick={()=>{Setmeals(food.drinks)}} > drinks </Link>
@@ -131,10 +131,7 @@ function Myorder() {
                             
                  
 
-                  )})}
-             
-                  
-                
+                  )})}                
                 </div>
                 
               </div>
@@ -166,8 +163,8 @@ function Myorder() {
                   { mypizza.map((pizza)=>{
                     if (pizza.id == id) {                 
                       return(                                    
-                      <div className='d-flex justify-content-between  '> 
-                          <div className='my-1 d-flex align-content-center  '>
+                      <div className='d-flex justify-content-between  align-items-center '> 
+                          <div className='my-1 d-flex align-items-center  '>
                           <img src={pizza.image} className=' img-fluid rounded-circle  ' style={{height:"50px"}} ></img>
                           <p className='mx-2'>{pizza.name}</p>
                            </div>
@@ -187,11 +184,11 @@ function Myorder() {
                   {orderlist.map((e)=>{
                     return(
                     <div className='my-4 d-flex  justify-content-between '>
-                      <div className='my-1 d-flex align-content-center  '>
+                      <div className='my-1 d-flex align-items-center  '>
                           <img src={e.image} className=' img-fluid rounded-circle  ' style={{height:"50px"}} ></img>
                           <p className='mx-2'>{e.name}</p>
                       </div>
-                      <div className='d-flex'>
+                      <div className='d-flex align-items-center '>
                        
                         <div className='mx-2'>
                           {e.price} EP
