@@ -23,16 +23,15 @@ function MainPage() {
            <Home/>
         </div>
         <div ref={ourchefs}>
-            <Ourchefs/>            
+                     
         </div>
         <div ref={menu}>
-            <Menu/>
+           
         </div>
         <div ref={aboutus}>
-            <Aboutus/>         
+                  
         </div>
         <div ref={help}>
-           <Footer/>
         </div>
       
         

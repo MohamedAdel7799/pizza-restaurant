@@ -18,9 +18,6 @@ export default function Menu() {
 
         Setdata(food.pizza)
      })
-
-     
-
   return (
     <div>
         <div className='container  title h-auto my-3 text-dark text-center d-flex  justify-content-between  '>

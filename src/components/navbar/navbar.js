@@ -68,15 +68,15 @@ export default function Navbar(props) {
                 {
                     signin?(<div className='collapse navbar-collapse justify-content-end   ' id='navbarNav' >
                    
-                   <div className='mx-3 my-sm-1 '><button className='btn signup text-light  px-3'
+                   <div className='mx-3 my-sm-1 '><button className=' text-light  px-3'
                    onClick={()=>{
                     localStorage.removeItem('signin')
                    }}>logout</button></div>
               
                </div>):(<div className='collapse navbar-collapse justify-content-end   ' id='navbarNav' >
                    
-                   <div className='mx-3 my-sm-1 '><button className='btn signup text-light  px-3'><Link to='/signin' className=' text-decoration-none text-light  ' >Signin</Link></button></div>
-                   <div className='mx-1 my-sm-2 '><button className='btn  px-2 text-light'><Link to='/signup' className=' text-decoration-none text-light  ' >Signup</Link></button></div>
+                   <div className='mx-3 my-sm-1 '><button className='  text-light  px-3'><Link to='/signin' className=' text-decoration-none text-light  ' >Signin</Link></button></div>
+                   <div className='mx-1 my-sm-2 '><button className='  px-2 text-light'><Link to='/signup' className=' text-decoration-none text-light  ' >Signup</Link></button></div>
               
                </div>)
                 }
