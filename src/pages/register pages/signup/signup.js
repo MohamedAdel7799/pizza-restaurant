@@ -39,7 +39,7 @@ function Signup() {
                 <input className='px-3 py-1' type='password' name='password'  placeholder='password' onChange={collectuserdata}  ></input>            
             </div>
             <div className='my-3 text-center py-2 '>
-                <button className='px-5 py-1 rounded-2 ' onClick={seduserdata}> Create Account </button>
+                <button className='px-5 py-1 account rounded-2 ' onClick={seduserdata}> Create Account </button>
             </div>
             <div className='text-center px-2 py-2 '>
                 <Link className='link text-decoration-none ' to='/signin'> Aready Have Account </Link>

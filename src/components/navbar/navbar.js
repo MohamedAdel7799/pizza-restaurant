@@ -21,7 +21,7 @@ export default function Navbar(props) {
 
   return (
     <div>
-        <motion.nav initial={{opacity:0,
+        <nav initial={{opacity:0,
         scale:0}}
         animate={{opacity:1,
         scale:1}}
@@ -84,7 +84,7 @@ export default function Navbar(props) {
            
             </div>
             <motion.div className='line' style={{height:5, position:"fixed", scaleX:scrollYProgress , transformOrigin:'0%' , top:0 , left:0, right:0}}></motion.div>
-        </motion.nav>
+        </nav>
     </div>
   )
 }

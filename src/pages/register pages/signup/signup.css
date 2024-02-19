@@ -23,10 +23,10 @@ input{
 }
 
 
-button{
-    border: o;
+.account{
+    border: 0;
     color: aliceblue;
-    background-color: #de3b00;
+    background-color: #1f1f1f77;
    
 }
 

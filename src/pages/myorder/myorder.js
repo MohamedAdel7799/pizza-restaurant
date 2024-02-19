@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addtooredr, removefromorder } from '../../redux/orderslice'
 import { FcSearch } from "react-icons/fc";
 import { MdDelete } from "react-icons/md";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { FcFilledFilter } from "react-icons/fc";
+import { Button } from 'bootstrap'
 
 
 
@@ -20,6 +23,7 @@ function Myorder() {
     const dispatch = useDispatch()
     const ordernum =Math.floor(Math.random() * 10000);
     const [additionsprice , setadditionsprice]=useState([])
+   
 
     let sum = 0
     additionsprice.forEach(element => {
@@ -61,8 +65,7 @@ function Myorder() {
           <div className=' container-fluid  '>
               <div className='d-flex justify-content-between mx-3 my-3 text-light'>
                   <div>
-                   <h3>pizza</h3>
-                   <h5>date</h5>
+                   <img src={require('./pizza.png')} className=' img-fluid ' style={{width:"50px"}}  ></img>
                   </div>
                   <div>
                       <div class="input-group ">
@@ -73,7 +76,7 @@ function Myorder() {
                       </div>
                   </div>
               </div>
-              <div className='text-danger fw-bold  d-flex justify-content-between my-3'>
+              <div className='text-danger fw-bold  d-flex justify-content-between my-5'>
                 <div>
                     <Link className='mx-4 text-decoration-none text-light  ' onClick={()=>{Setmeals(food.pasta)}}>pasta</Link>
                     <Link className='mx-4 text-decoration-none text-light' onClick={()=>{Setmeals(food.drinks)}} > drinks </Link>
@@ -83,8 +86,8 @@ function Myorder() {
                     <Link className='mx-4 text-decoration-none text-light' onClick={()=>{Setmeals(food.sides)}}>sides</Link>
                 </div>
                 <div>
-                    <select class="form-select form-select-sm"  style={{width:"80px"}} aria-label=".form-select-sm example">
-                      <option  disabled selected>filter</option>
+                    <select class="form-select form-select-sm mx-3"  style={{width:"80px"}} aria-label=".form-select-sm example">
+                      <option  disabled selected> filter</option>
                       <option value="1">price</option>
                       <option value="2">Two</option>
                       <option value="3">Three</option>
@@ -96,17 +99,37 @@ function Myorder() {
                 <div className='row row-cols-lg-3 g-3 text-center  ' >
                   {meals.map((meal)=>{return(
 
-                       <div class="card mx-auto h-100 p-0  " style={{width: "18rem"}}>
-                          <img class="card-img-center mx-auto my-2 h-75" src={meal.image} style={{width: "100px"}} ></img>
-                          <div class="card-body h-25  ">
-                            <h6 class="card-title fw-bold  ">{meal.name}</h6>
-                            <p class="card-text ">{meal.price} EP</p>
-                            <button className='btn btn-danger' onClick={()=>{
-                              dispatch(addtooredr(meal))            
-                              setadditionsprice([...additionsprice , meal.price])
-                            }} > add </button>
-                          </div>
-                       </div>
+                             <div className=' '> 
+                                  <div className="col  mb-4  ">
+                                        <div className="card h-100 w-75 mx-auto  border-0  ">
+                                          <div className="h-75" >
+                                            <img src={meal.image}  className="w-50  img-fluid  "/>                                           
+                                              
+                                              <div className="hover-overlay">
+                                                <div className="mask" style={{backgroundColor: "rgba(251, 251, 251, 0.15)"}}></div>
+                                              </div>                                         
+                                          </div>
+                                          <div className="card-body d-flex justify-content-between align-items-center bg-dark ">
+                                            <div className=' text-start '>
+                                                <h5 className="card-title mb-3 fw-bolder text-light">{meal.name}</h5>                                  
+                                                <h6 className="mb-3 text-danger fw-bold">{meal.price} EP</h6>
+
+                                            </div>
+                                            <div className=''>
+                                            <button className='addbutton  fw-bolder text-light' onClick={()=>{
+                                                              dispatch(addtooredr(meal))            
+                                                              setadditionsprice([...additionsprice , meal.price])
+                                                            }} > <IoIosAddCircleOutline/> </button>
+                                                            
+                                            </div>                                            
+                                          </div>
+                                        </div>
+                                       
+                                  </div>
+
+                             </div>
+                            
+                 
 
                   )})}
              
